@@ -14,7 +14,7 @@ def FirstloginToTwitch():
     Для последующих запусков используйте файл tests.py"""
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--mute-audio")
-    driver = webdriver.Chrome(chrome_options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get("http://www.twitch.tv/login")
     elem = driver.find_element_by_id("login-username")
     elem.send_keys(login)
